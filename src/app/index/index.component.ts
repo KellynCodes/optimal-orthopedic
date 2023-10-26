@@ -10,8 +10,6 @@ import * as Aos from 'aos';
   styleUrls: ['./index.component.css'],
 })
 export class IndexComponent {
-  @ViewChild('swiper') swiper!: ElementRef<SwiperContainer>;
-
   ngOnInit(): void {
     new PureCounter();
 

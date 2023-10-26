@@ -13,7 +13,7 @@ export class GalleryComponent {
     speed: 600,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     slidesPerView: 'auto',
@@ -28,11 +28,11 @@ export class GalleryComponent {
         spaceBetween: 20,
       },
       640: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
       992: {
-        slidesPerView: 5,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
     },

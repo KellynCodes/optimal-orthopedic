@@ -1,23 +1,16 @@
 <!-- This is an example component -->
-<div class="flex h-screen w-screen items-center bg-gray-100">
+<div class="d-flex vh-100 vw-100 align-items-center bg-light">
   <div
-    class="container flex flex-col items-center justify-center px-5 text-gray-700 md:flex-row"
+    class="container d-flex align-items-center justify-content-center px-3 text-secondary md:flex-row"
   >
     <div class="max-w-md">
-      <div class="font-dark text-5xl font-bold">404</div>
-      <p class="text-2xl font-light leading-normal md:text-3xl">
-        Sorry we couldn't find this page.
-      </p>
-      <p class="mb-8">
+      <div class="font-dark h1 font-weight-bold">404</div>
+      <p class="h3 font-weight-light">Sorry we couldn't find this page.</p>
+      <p class="mb-4">
         But don't worry, you can find plenty of other things on our homepage.
       </p>
 
-      <a
-        routerLink="/"
-        class="focus:shadow-outline-[#3fbbc0] inline rounded-lg border border-transparent bg-[#3fbbc0] px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-[#2a7376] focus:outline-none active:bg-[#3fbbc0]"
-      >
-        back to homepage
-      </a>
+      <a routerLink="/" class="custom-btn">BACK TO HOMEPAGE</a>
     </div>
     <div class="max-w-lg">
       <svg

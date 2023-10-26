@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 
 @Component({
@@ -23,12 +23,12 @@ export class TestimonialsComponent {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
 
       1200: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
     },
   };

@@ -1,3 +1,4 @@
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,9 +11,8 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { TitleStrategy } from '@angular/router';
 import { TemplatePageTitleStrategy } from './extension/title.strategy';
 import { AppRoutingModule } from './app-routing.module';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { register } from 'swiper/element';
+import { register } from 'swiper/element/bundle';
 import { SwiperDirective } from './directives/swiper';
 import { NotFoundComponent } from './components/shared/not-found/not-found.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
@@ -32,7 +32,6 @@ register();
     IndexComponent,
     NavbarComponent,
     FooterComponent,
-    SwiperDirective,
     NotFoundComponent,
     AppointmentComponent,
     AboutComponent,
@@ -41,13 +40,13 @@ register();
     TestimonialsComponent,
     GalleryComponent,
     ContactComponent,
+    SwiperDirective,
     FaqComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
     CarouselModule.forRoot(),
   ],
   providers: [

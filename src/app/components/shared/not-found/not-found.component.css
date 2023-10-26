@@ -1,0 +1,45 @@
+.font-dark {
+  font-family: Arial, sans-serif; /* Replace with the desired font */
+}
+
+.custom-btn {
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: #3fbbc0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.15s ease;
+}
+
+.custom-btn:hover {
+  background-color: #2a7376;
+  text-decoration: none;
+  color: #fff;
+}
+
+.custom-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(63, 187, 192, 0.5);
+}
+
+.custom-btn:active {
+  background-color: #3fbbc0;
+}
+
+.max-w-md {
+  max-width: 500px; /* Adjust based on your requirements */
+}
+
+.max-w-lg {
+  max-width: 700px; /* Adjust based on your requirements */
+}
+
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+}

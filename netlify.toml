@@ -5,4 +5,4 @@
 
 [build]
   command = "ng build"
-  publish = "dist/mentor"
+  publish = "dist/client"

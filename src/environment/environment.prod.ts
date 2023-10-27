@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api-kelly.onrender.com/api/v1',
+  apiUrl: 'https://optimal_orthopedic.azurewebsites.net/api/v1',
 };

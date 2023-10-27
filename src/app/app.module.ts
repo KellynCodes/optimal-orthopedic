@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,7 +7,6 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { StoreModule } from '@ngrx/store';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { TitleStrategy } from '@angular/router';
 import { TemplatePageTitleStrategy } from './extension/title.strategy';
@@ -45,6 +45,7 @@ register();
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CarouselModule.forRoot(),

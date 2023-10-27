@@ -43,7 +43,7 @@
             <div class="info-box mt-4">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
-              <p>714-485-7245</p>
+              <p><a href="tel:714-485-7245"> 714-485-7245</a></p>
             </div>
           </div>
         </div>
@@ -51,9 +51,8 @@
 
       <div class="col-lg-6">
         <form
-          action="forms/contact.php"
-          method="post"
-          role="form"
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
           class="php-email-form"
         >
           <div class="row">
@@ -62,31 +61,63 @@
                 type="text"
                 name="name"
                 class="form-control"
-                id="name"
                 placeholder="Your Name"
-                required=""
+                formControlName="name"
+                required
               />
+              <h6
+                *ngIf="
+                  contactForm.get('name')?.touched &&
+                  contactForm.get('name')?.hasError('required')
+                "
+              >
+                Name is required.
+              </h6>
             </div>
             <div class="col-md-6 form-group mt-3 mt-md-0">
               <input
                 type="email"
                 class="form-control"
                 name="email"
-                id="email"
                 placeholder="Your Email"
-                required=""
+                formControlName="email"
+                required
               />
+              <h6
+                *ngIf="
+                  contactForm.get('email')?.touched &&
+                  contactForm.get('email')?.hasError('required')
+                "
+              >
+                Email is required.
+              </h6>
             </div>
           </div>
           <div class="form-group mt-3">
             <input
-              type="number"
+              type="tel"
               class="form-control"
               name="phone"
-              id="subject"
               placeholder="Phone"
-              required=""
+              formControlName="phone"
+              required
             />
+            <h6
+              *ngIf="
+                contactForm.get('phone')?.touched &&
+                contactForm.get('phone')?.hasError('required')
+              "
+            >
+              Phone is required.
+            </h6>
+            <h6
+              *ngIf="
+                contactForm.get('phone')?.touched &&
+                contactForm.get('phone')?.hasError('pattern')
+              "
+            >
+              Invalid phone number format.
+            </h6>
           </div>
           <div class="form-group mt-3">
             <textarea
@@ -94,8 +125,17 @@
               name="message"
               rows="7"
               placeholder="How can we help you?"
-              required=""
+              formControlName="message"
+              required
             ></textarea>
+            <h6
+              *ngIf="
+                contactForm.get('message')?.touched &&
+                contactForm.get('message')?.hasError('required')
+              "
+            >
+              Message is required.
+            </h6>
           </div>
           <div class="my-3">
             <div class="loading">Loading</div>

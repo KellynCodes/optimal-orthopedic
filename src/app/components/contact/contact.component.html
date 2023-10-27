@@ -145,7 +145,10 @@
             </div>
           </div>
           <div class="text-center">
-            <button type="submit">Send Message</button>
+            <button
+              [innerText]="isSending ? 'Sending' : 'Send Message'"
+              type="submit"
+            ></button>
           </div>
         </form>
       </div>

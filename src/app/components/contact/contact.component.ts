@@ -10,6 +10,7 @@ import emailjs from '@emailjs/browser';
 })
 export class ContactComponent {
   public contactForm!: FormGroup;
+  public isSending: boolean = false;
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -33,6 +34,7 @@ export class ContactComponent {
       return alert('Please fill all fields');
     }
     try {
+      this.isSending = true;
       const response = await emailjs.send(
         'service_mf53oe8',
         'template_0cy51ed',
@@ -43,14 +45,17 @@ export class ContactComponent {
         'qO-NrEIA8q8umfPy0'
       );
       if (response.status != HttpStatusCode.Ok) {
+        this.isSending = false;
         return alert(
           'Something unexpected happened while sending the message.Please try again.'
         );
       }
       if (response.status == HttpStatusCode.Ok) {
+        this.isSending = false;
         return alert('We have received your message.');
       }
     } catch (error) {
+        this.isSending = false;
       return alert(error);
     }
   }

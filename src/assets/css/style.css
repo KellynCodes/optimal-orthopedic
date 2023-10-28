@@ -579,13 +579,6 @@ h6 {
   #hero {
     height: 100vh;
   }
-
-  #hero .container {
-    margin-top: -20px;
-  }
-  #hero .container:nth-child(2) {
-    margin-top: -100px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -610,6 +603,9 @@ h6 {
 @media (max-width: 600px) {
   #hero .container {
     width: 18rem !important;
+    background: red !important;
+    padding: 0.5rem !important;
+    margin-top: -6rem !important;
   }
 }
 /*--------------------------------------------------------------

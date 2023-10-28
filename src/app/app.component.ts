@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  ngOnInit(): void {
-
-  }
+  public IsPageLoaded: boolean = false;
+  ngOnInit(): void {}
 }

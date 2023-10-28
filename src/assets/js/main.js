@@ -6,7 +6,7 @@
  * License: https://bootstrapmade.com/license/
  */
 (function () {
-  "use strict";
+  ("use strict");
 
   /**
    * Easy selector helper function
@@ -184,8 +184,8 @@
    */
   let preloader = select("#preloader");
   if (preloader) {
-    window.addEventListener("load", () => {
+    setTimeout(() => {
       preloader.remove();
-    });
+    }, 3000);
   }
 })();

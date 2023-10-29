@@ -44,7 +44,11 @@
             <div class="info-box mt-4">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>contact@optimalorthomed.com</p>
+              <p>
+                <a href="mailto:contact@optimalorthomed.com"
+                  >contact@optimalorthomed.com</a
+                >
+              </p>
             </div>
           </div>
           <div class="col-md-6">
@@ -108,16 +112,7 @@
               name="phone"
               placeholder="Phone"
               formControlName="phone"
-              required
             />
-            <h6
-              *ngIf="
-                contactForm.get('phone')?.touched &&
-                contactForm.get('phone')?.hasError('required')
-              "
-            >
-              Phone is required.
-            </h6>
             <h6
               *ngIf="
                 contactForm.get('phone')?.touched &&

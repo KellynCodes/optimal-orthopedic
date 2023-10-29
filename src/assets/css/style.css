@@ -604,6 +604,10 @@ h6 {
   #hero .container {
     width: 18rem !important;
   }
+
+  #hero .carousel-item {
+    align-items: center !important;
+  }
 }
 /*--------------------------------------------------------------
 # Sections General

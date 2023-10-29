@@ -81,14 +81,6 @@
           <h6
             *ngIf="
               appointmentForm.get('phone')?.touched &&
-              appointmentForm.get('phone')?.hasError('required')
-            "
-          >
-            Phone number is required.
-          </h6>
-          <h6
-            *ngIf="
-              appointmentForm.get('phone')?.touched &&
               appointmentForm.get('phone')?.hasError('pattern')
             "
           >

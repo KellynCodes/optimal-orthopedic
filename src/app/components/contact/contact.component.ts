@@ -20,13 +20,7 @@ export class ContactComponent {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern('^\\+(?:[0-9] ?){6,14}[0-9]$'),
-        ],
-      ],
+      phone: ['', [Validators.pattern('^\\+(?:[0-9] ?){6,14}[0-9]$')]],
       date: [new Date().toDateString(), Validators.required],
       message: ['', Validators.required],
     });

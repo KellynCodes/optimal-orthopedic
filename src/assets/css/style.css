@@ -596,14 +596,13 @@ h6 {
 
 @media (max-height: 500px) {
   #hero {
-    height: 160vh;
+    height: 100vh;
   }
 }
 
 @media (max-width: 600px) {
   #hero .container {
     width: 18rem !important;
-    margin-top: -10rem !important;
   }
 }
 /*--------------------------------------------------------------

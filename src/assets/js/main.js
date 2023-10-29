@@ -186,6 +186,6 @@
   if (preloader) {
     setTimeout(() => {
       preloader.remove();
-    }, 2000);
+    }, 4000);
   }
 })();

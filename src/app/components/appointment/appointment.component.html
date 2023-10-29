@@ -1,3 +1,13 @@
+<div [class]="errorMessage != null ? 'show' : ''" class="alert error">
+  <span class="icon">X</span>
+  <span class="text">{{ errorMessage }}</span>
+</div>
+
+<div [class]="successMessage != null ? 'show' : ''" class="alert success">
+  <span class="icon">&#10003;</span>
+  <span class="text">{{ successMessage }}</span>
+</div>
+
 <section id="appointment" class="appointment section-bg">
   <div class="container" data-aos="fade-up">
     <div class="section-title">

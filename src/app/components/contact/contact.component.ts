@@ -1,7 +1,7 @@
 import { HttpStatusCode } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +11,9 @@ import emailjs from '@emailjs/browser';
 export class ContactComponent {
   public contactForm!: FormGroup;
   public isSending: boolean = false;
+  public errorMessage: string | null | unknown = null;
+  public successMessage: string | null = null;
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -31,32 +34,49 @@ export class ContactComponent {
 
   async onSubmit(): Promise<void> {
     if (!this.contactForm.valid) {
-      return alert('Please fill all fields');
+      this.errorMessage = 'Please fill all the fields';
+      this.setMessageState(5000);
+      return;
     }
     try {
       this.isSending = true;
       const response = await emailjs.send(
-        'service_mf53oe8',
-        'template_0cy51ed',
+        'service_angzgfi',
+        'template_em27ivs',
         {
-          to_name: 'KellynCodes',
+          to_name: 'there',
           ...this.contactForm.value,
         },
-        'qO-NrEIA8q8umfPy0'
+        'qivBRNuQUCrknS0_k'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending = false;
-        return alert(
-          'Something unexpected happened while sending the message.Please try again.'
-        );
+        this.errorMessage =
+          'Something unexpected happened while sending the message.Please try again.';
+        this.setMessageState(5000);
+        return;
       }
       if (response.status == HttpStatusCode.Ok) {
         this.isSending = false;
-        return alert('We have received your message.');
+        this.successMessage = 'We have received your message.';
+        this.setMessageState(5000);
+        return;
       }
-    } catch (error) {
+    } catch (error: any) {
+      if (error?.status != HttpStatusCode.Ok) {
         this.isSending = false;
-      return alert(error);
+        this.errorMessage = 'Message not sent. Try again.';
+        this.setMessageState(5000);
+        return;
+      }
     }
+  }
+
+  setMessageState(ms: number): void {
+    setTimeout(() => {
+      this.errorMessage = null;
+      this.successMessage = null;
+    }, ms);
+    return;
   }
 }

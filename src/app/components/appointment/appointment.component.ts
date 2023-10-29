@@ -11,6 +11,9 @@ import emailjs from '@emailjs/browser';
 export class AppointmentComponent {
   public appointmentForm!: FormGroup;
   public isSending: boolean = false;
+  public errorMessage: string | null | unknown = null;
+  public successMessage: string | null = null;
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -33,32 +36,49 @@ export class AppointmentComponent {
 
   async onSubmit(): Promise<void> {
     if (!this.appointmentForm.valid) {
-      return alert('Please fill all fields');
+      this.errorMessage = 'Please fill all the fields';
+      this.setMessageState(5000);
+      return;
     }
     try {
       this.isSending = true;
       const response = await emailjs.send(
-        'service_mf53oe8',
-        'template_6zqdrcq',
+        'service_angzgfi',
+        'template_m0ix7uc',
         {
-          to_name: 'KellynCodes',
+          to_name: 'there',
           ...this.appointmentForm.value,
         },
-        'qO-NrEIA8q8umfPy0'
+        'qivBRNuQUCrknS0_k'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending = false;
-        return alert(
-          'Something unexpected happened while sending the message.Please try again.'
-        );
+        this.errorMessage =
+          'Something unexpected happened while sending the message.Please try again.';
+        this.setMessageState(5000);
+        return;
       }
       if (response.status == HttpStatusCode.Ok) {
         this.isSending = false;
-        return alert('Your appointment was sent successfully.');
+        this.successMessage = 'We have received your message.';
+        this.setMessageState(5000);
+        return;
       }
-    } catch (error) {
-      this.isSending = false;
-      return alert(error);
+    } catch (error: any) {
+      if (error?.status != HttpStatusCode.Ok) {
+        this.isSending = false;
+        this.errorMessage = 'Appointment not sent. Try again.';
+        this.setMessageState(5000);
+        return;
+      }
     }
+  }
+
+  setMessageState(ms: number): void {
+    setTimeout(() => {
+      this.errorMessage = null;
+      this.successMessage = null;
+    }, ms);
+    return;
   }
 }

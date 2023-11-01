@@ -1256,11 +1256,25 @@ section {
   border-radius: 4px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.1);
+  width: 15rem;
+  height: 20rem;
+  max-height: 25rem;
 }
 
 .doctors .member .member-img {
   position: relative;
   overflow: hidden;
+  min-width: 100%;
+  min-width: 100%;
+  min-height: 70%;
+  max-height: 70%;
+}
+
+.doctors .member .member-img img {
+  min-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
 .doctors .member .social {
@@ -1269,7 +1283,6 @@ section {
   bottom: 0;
   right: 0;
   height: 40px;
-  opacity: 0;
   transition: ease-in-out 0.3s;
   background: rgba(255, 255, 255, 0.85);
   display: flex;
@@ -1301,6 +1314,9 @@ section {
 
 .doctors .member .member-info {
   padding: 25px 15px;
+  width: 100%;
+  max-height: 38%;
+  min-height: 38%;
 }
 
 .doctors .member .member-info h4 {
@@ -1322,10 +1338,6 @@ section {
   font-size: 14px;
   line-height: 26px;
   color: #777777;
-}
-
-.doctors .member:hover .social {
-  opacity: 1;
 }
 
 /*--------------------------------------------------------------

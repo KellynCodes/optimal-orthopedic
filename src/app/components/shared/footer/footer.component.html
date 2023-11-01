@@ -12,7 +12,7 @@
               CA 92780-3030 A108
               <br />
               <strong>Phone:</strong>
-              <a href="tel:714-485-7245"> 714-485-7245</a><br />
+              <a href="tel:+1714-485-7245"> +1714-485-7245</a><br />
               <strong>Email:</strong>
               <a href="mailto:contact@optimalorthomed.com"
                 >contact@optimalorthomed.com</a
@@ -83,7 +83,20 @@
             Subscribe to our weekly Newsletter to receive comprehensive lesson
             and updates about our services.
           </p>
-          <form action="" method="post">
+          <form
+            class="mt-6"
+            name="subscription"
+            method="POST"
+            netlify
+            data-netlify="true"
+          >
+            <input
+              type="hidden"
+              name="subject"
+              data-remove-prefix
+              value="Subscription Alert from %{formName} with submission Id of (%{submissionId})"
+            />
+
             <input type="email" name="email" /><input
               type="submit"
               value="Subscribe"

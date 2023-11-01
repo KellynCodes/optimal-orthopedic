@@ -1,3 +1,4 @@
+import { Doctors, Physicians } from '../../data/providers/providers';
 import { HttpStatusCode } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -13,6 +14,7 @@ export class AppointmentComponent {
   public isSending: boolean = false;
   public errorMessage: string | null | unknown = null;
   public successMessage: string | null = null;
+  public _providers = [...Doctors, ...Physicians];
 
   constructor(private fb: FormBuilder) {}
 

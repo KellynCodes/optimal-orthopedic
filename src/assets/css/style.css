@@ -470,13 +470,6 @@ h6 {
   border-top: 4px solid #3fbbc0;
 }
 
-@media (max-width: 1200px) {
-  #hero .container {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
 #hero h2 {
   color: #2f2f2f;
   margin-bottom: 20px;

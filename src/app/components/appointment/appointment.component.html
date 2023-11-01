@@ -122,16 +122,11 @@
             required
           >
             <option value="">Select Doctor</option>
-            <option value="Dr. Paul J. Braaton">
-              Dr. Paul J. Braaton, MD, FAAOS
-            </option>
-            <option value="Dr. Robert Cash">Dr. Robert Cash, MD, FAAOS</option>
-            <option value="William J. Holmes">
-              William J. Holmes, MD, FAAOS
-            </option>
-            <option value="Michael B. Purnell">
-              Michael B. Purnell, MD, FAAOS
-            </option>
+            <ng-container *ngFor="let provider of _providers">
+              <option [value]="provider.name">
+                {{ provider.name }}
+              </option>
+            </ng-container>
           </select>
           <h6
             *ngIf="

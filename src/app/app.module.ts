@@ -18,11 +18,12 @@ import { NotFoundComponent } from './components/shared/not-found/not-found.compo
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
-import { DepartmentsComponent } from './components/departments/departments.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { ProvidersComponent } from './components/providers/providers.component';
+import { ProviderComponent } from './components/provider/provider.component';
 
 register();
 
@@ -36,12 +37,13 @@ register();
     AppointmentComponent,
     AboutComponent,
     ServicesComponent,
-    DepartmentsComponent,
     TestimonialsComponent,
     GalleryComponent,
     ContactComponent,
     SwiperDirective,
     FaqComponent,
+    ProvidersComponent,
+    ProviderComponent,
   ],
   imports: [
     BrowserModule,

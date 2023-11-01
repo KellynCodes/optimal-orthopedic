@@ -10,6 +10,40 @@ body {
   overflow-x: hidden;
 }
 
+/* Define the styles for the scrollbar track and thumb */
+/* This will work in some modern browsers (e.g., Chrome) */
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar {
+  width: 12px; /* width of the scrollbar */
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #3fbbc0; /* color of the scrollbar thumb */
+  border-radius: 6px; /* rounded corners of the thumb */
+}
+
+/* Handle when the user hovers over the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #3fbbc0; /* color of the thumb on hover */
+}
+
+/* Track (background of the scrollbar) when not hovering over the thumb */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle when the user hovers over the track */
+::-webkit-scrollbar-track:hover {
+  background: #ddd;
+}
+
+/* Corner (between the vertical and horizontal scrollbars) */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
 .alert {
   background-color: #ffffff !important;
   padding: 0;

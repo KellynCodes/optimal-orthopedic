@@ -1,6 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { SwiperContainer } from 'swiper/element';
-
+import { Physicians } from '../data/providers/providers';
+import { Component } from '@angular/core';
 import PureCounter from '@srexi/purecounterjs';
 import * as Aos from 'aos';
 

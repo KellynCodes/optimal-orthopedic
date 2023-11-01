@@ -23,7 +23,7 @@
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
     <!-- Uncomment below if you prefer to use an image logo -->
-    <a href="#hero" class="logo me-auto"
+    <a routerLink="/" class="logo me-auto"
       ><img src="assets/img/logo.jpg" alt="Optimal Orthopedic Medical Group"
     /></a>
     <!-- <h1 class="logo me-auto"><a href="#hero">Optimal Orthopedic</a></h1> -->
@@ -49,19 +49,15 @@
             >Services</a
           >
         </li>
+
         <li>
           <a
             (click)="toggleNavbar()"
             class="nav-link scrollto"
-            href="#departments"
-            >Departments</a
+            href="#providers"
+            >Providers</a
           >
         </li>
-        <!-- <li>
-          <a (click)="toggleNavbar()" class="nav-link scrollto" href="#doctors"
-            >Doctors</a
-          >
-        </li> -->
         <!-- <li class="dropdown">
           <a href="#"
             ><span>Drop Down</span> <i class="bi bi-chevron-down"></i

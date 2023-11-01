@@ -1,0 +1,49 @@
+<section (click)="closeModal()" class="provider-container">
+  <div class="card carded mb-3 mt-3" *ngIf="providerDetail.length > 0">
+    <div class="provider-wrapper">
+      <div class="img-container">
+        <img
+          [src]="providerDetail[0].image"
+          class="img-fluid rounded-start"
+          [alt]="providerDetail[0].name"
+        />
+      </div>
+      <div class="about-container">
+        <div class="card-body">
+          <h5 class="">Name</h5>
+          <h5 class="card-title">{{ providerDetail[0].name }}</h5>
+          <hr />
+          <h5 class="">About</h5>
+          <p class="card-text">
+            {{ providerDetail[0].about }}
+          </p>
+          <hr />
+          <h5 class="">Bio</h5>
+          <p class="card-text">
+            {{ providerDetail[0].bio }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <p class="p-5">
+        {{ providerDetail[0].detail }}
+      </p>
+    </div>
+    <img
+      class="close-icon"
+      (click)="closeModal()"
+      src="../../../assets/img/cut-icon.svg"
+      alt="Close"
+    />
+  </div>
+  <div class="custom-card" *ngIf="providerDetail.length <= 0">
+    <h1>No provider found.</h1>
+    <img
+      class="close-icon"
+      (click)="closeModal()"
+      src="../../../assets/img/cut-icon.svg"
+      alt="Close"
+    />
+  </div>
+</section>

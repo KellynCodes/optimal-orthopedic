@@ -21,21 +21,12 @@ export class ProviderComponent {
   ngOnInit(): void {
     console.log(this._providers);
     this._providerId = this._activeRoute.snapshot.params['name'];
-    console.log(this._providerId);
-
-    Aos.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false,
-    });
   }
 
   public get providerDetail(): ProviderDto[] {
     const result = this._providers.filter(
       (d) => d.id == this._providerId ?? ''
     );
-    console.log(result);
     return result;
   }
 

@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
 }
 
+.lowercase {
+  text-transform: lowercase;
+  font-size: 0.89rem;
+}
+
 /* Define the styles for the scrollbar track and thumb */
 /* This will work in some modern browsers (e.g., Chrome) */
 

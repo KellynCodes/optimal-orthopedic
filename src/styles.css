@@ -10,8 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-.lowercase {
-  text-transform: lowercase;
+.text-md {
   font-size: 0.89rem;
 }
 

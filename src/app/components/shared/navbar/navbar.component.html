@@ -24,7 +24,7 @@
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
     <!-- Uncomment below if you prefer to use an image logo -->
-    <a routerLink="/" class="logo me-auto"
+    <a href="#hero" class="logo me-auto"
       ><img src="assets/img/logo.jpg" alt="Optimal Orthopedic Medical Group"
     /></a>
     <!-- <h1 class="logo me-auto"><a href="#hero">Optimal Orthopedic</a></h1> -->
@@ -87,6 +87,14 @@
             >Contact</a
           >
         </li>
+        <li>
+          <a
+            (click)="toggleNavbar()"
+            class="nav-link scrollto"
+            href="#appointment"
+            >Book Appointment</a
+          >
+        </li>
       </ul>
       <i
         [class]="isNavbarOpen ? 'bi-x' : 'bi-list'"
@@ -96,8 +104,11 @@
     </nav>
     <!-- .navbar -->
 
-    <a href="#appointment" class="appointment-btn scrollto"
-      ><span class="d-none d-md-inline">Make an</span> Appointment</a
+    <a
+      href="https://bp-oom.ihealthspot.com/"
+      target="_blank"
+      class="appointment-btn scrollto"
+      >Pay Here</a
     >
   </div>
 </header>

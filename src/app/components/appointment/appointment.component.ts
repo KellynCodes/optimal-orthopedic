@@ -63,6 +63,7 @@ export class AppointmentComponent {
     } catch (error: any) {
       if (error?.status != HttpStatusCode.Ok) {
         this.isSending = false;
+        console.log(error);
         this.errorMessage = 'Appointment not sent. Try again.';
         this.setMessageState(5000);
         return;

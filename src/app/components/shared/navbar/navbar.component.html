@@ -87,14 +87,14 @@
             >Contact</a
           >
         </li>
-        <li>
+<!--         <li>
           <a
             (click)="toggleNavbar()"
             class="nav-link scrollto"
             href="#appointment"
             >Book Appointment</a
           >
-        </li>
+        </li> -->
       </ul>
       <i
         [class]="isNavbarOpen ? 'bi-x' : 'bi-list'"
@@ -105,10 +105,10 @@
     <!-- .navbar -->
 
     <a
-      href="https://bp-oom.ihealthspot.com/"
+      routerLink="/appointment"
       target="_blank"
       class="appointment-btn scrollto"
-      >Pay Your Bill</a
+      >Book Appointment</a
     >
   </div>
 </header>
